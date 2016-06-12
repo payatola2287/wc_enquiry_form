@@ -36,7 +36,9 @@ function woocommerce_product_tabs_contact_form7($tabs){
 **/
 function woocommerce_product_contact_form7_tab(){
 
-    echo do_shortcode('[contact-form-7 title="Contact form 1"]');
+    $shortCode = get_option( 'wc_enquiry_form_shortcode' );
+    
+    echo do_shortcode( $shortCode );
 
 }
 
